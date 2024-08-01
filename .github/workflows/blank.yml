@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ${{ github.actor }} was initaiate a workflow
+run-name: ${{ github.actor }} was initiate a workflow
+
+env:
+  GITHUB_ACTIONS: Test_Actions
+  
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - run: echo "ENV ${{ env.GITHUB_ACTIONS }}"
+    - run: echo "Branch ${{ github.ref }} and Repo ${{ github.repository}}"
+    - run: echo "Event ${{ github.event_name }}"
