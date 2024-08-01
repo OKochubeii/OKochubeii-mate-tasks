@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ${{ github.actor }} was initaiate a workflow
+name: Task_1
 run-name: ${{ github.actor }} was initiate a workflow
 
 env:
